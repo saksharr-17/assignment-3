@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    double num,base,value,sqrtnum;
+    int choice;
+    float a,b,c;
+    printf("press 1 for addition\n");
+    printf("press 2 for subtraction\n");
+    printf("press 3 for multiplication\n");
+    printf("press 4 for division\n");
+    printf("press 5 for logarithmic\n");
+    printf("press 6 for square root\n");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+        case 1:
+        printf("enter values");
+        scanf("%f%f",&a,&b);
+        c=a+b;
+        printf("The sum of %f and %f is %f\n",a,b,c);
+        break;
+        
+        case 2:
+        printf("enter values");
+        scanf("%f%f",&a,&b);
+        c=a-b;
+        printf("The difference of %f and %f is %f\n",a,b,c);
+        break;
+        
+        case 3:
+        printf("enter values");
+        scanf("%f%f",&a,&b);
+        c=a*b;
+        printf("The product of %f and %f is %f\n",a,b,c);
+        break;
+        
+        case 4:
+        printf("enter values");
+        scanf("%f%f",&a,&b);
+        c=a/b;
+        printf("The result of %f and %f is %f\n",a,b,c);
+        break;
+        
+        case 5:
+        printf("Enter a number: ");
+        scanf("%lf", &num);
+        printf("Enter the base for the logarithm ");
+        scanf("%lf", &base);
+        if (base == 10) {
+            value = log10(num);} 
+        else if (base == exp(1)){
+            value = log(num);} 
+        else {
+            value = log(num) / log(base); }
+        printf("The logarithm of %lf to the base %lf is: %lf\n", num, base, value);
+        break;
+        
+        case 6:
+        printf("Enter a number: ");
+        scanf("%lf", &num);
+        sqrtnum = sqrt(num);
+        printf("Square root of %lf = %lf\n", num, sqrtnum);
+        break;
+        
+        default:
+        printf("wrong ");
+        
+    }
+
+    return 0;
+}
